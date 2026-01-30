@@ -11,14 +11,15 @@ base {
 repositories {
     // Fabric & Minecraft dependencies
     maven { url = uri("https://maven.fabricmc.net/") }
-    mavenCentral()
     maven { url = uri("https://maven.terraformersmc.com/releases/") }
+    mavenCentral()
     maven { url = uri("https://repo.spongepowered.org/maven") }
 
     // Meteor repositories
     maven { url = uri("https://maven.meteordev.org/releases") }
     maven { url = uri("https://maven.meteordev.org/snapshots") }
 }
+
 
 dependencies {
     // Fabric
