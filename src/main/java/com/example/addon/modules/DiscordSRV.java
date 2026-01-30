@@ -2,14 +2,16 @@ package com.example.addon.modules;
 
 import com.example.addon.utils.webhook.WebhookHandler;
 import com.example.addon.utils.webhook.WebhookContent;
-
-
+import com.example.addon.AddonTemplate;
+import meteordevelopment.meteorclient.events.render.Render3DEvent;
+import meteordevelopment.meteorclient.renderer.ShapeMode;
+import meteordevelopment.meteorclient.settings.ColorSetting;
 import meteordevelopment.meteorclient.events.game.GameLeftEvent;
 import meteordevelopment.meteorclient.events.game.ReceiveMessageEvent;
 import meteordevelopment.meteorclient.settings.*;
 import meteordevelopment.meteorclient.systems.modules.Module;
 import meteordevelopment.meteorclient.utils.network.MeteorExecutor;
-
+import meteordevelopment.meteorclient.utils.render.color.Color;
 import meteordevelopment.orbit.EventHandler;
 
 import net.dv8tion.jda.api.JDA;
@@ -67,4 +69,7 @@ public class DiscordSRV extends Module {
     private final Setting<String> webhookUrl = sgGeneral.add(new StringSetting.Builder()
         .name("webhook-url")
         .defaultValue("")
-        .visib
+        .visible(() -> mode.get() == Mode.Webhook)
+        .onChanged(o -> requireRebuild = true)
+        .build()
+    );
