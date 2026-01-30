@@ -22,13 +22,14 @@ repositories {
 
 dependencies {
     // Fabric
-    minecraft(libs.minecraft)
-    mappings(variantOf("net.fabricmc:yarn:1.21.8-rc1+build.2") { classifier("v2") })
-    modImplementation(libs.fabric.loader)
+    minecraft("com.mojang:minecraft:1.21.1")
+    mappings(variantOf("net.fabricmc:yarn:1.21.8-rc1+build.2") { it.classifier = "v2" })
+    modImplementation("net.fabricmc:fabric-loader:0.14.23")
 
     // Meteor
-    modImplementation(libs.meteor.client)
+    modImplementation("meteordevelopment:meteor-client:1.10.8")
 }
+
 
 tasks {
     processResources {
