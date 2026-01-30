@@ -15,19 +15,19 @@ repositories {
     mavenCentral()
     maven { url = uri("https://repo.spongepowered.org/maven") }
 
-    // Meteor repositories
-    maven { url = uri("https://maven.meteordev.org/releases") }
-    maven { url = uri("https://maven.meteordev.org/snapshots") }
+    maven("https://maven.meteordev.org/releases")
+    maven("https://maven.fabricmc.net/")
+    mavenCentral()
+    // other repos as needed
 }
 
 dependencies {
     // Fabric
-    minecraft("com.mojang:minecraft:1.21.1")
+    minecraft("com.mojang:minecraft:1.21.8")
     mappings("net.fabricmc:yarn:1.21.8-rc1+build.2:v2")
     modImplementation("net.fabricmc:fabric-loader:0.14.23")
-
-    // Meteor
-    modImplementation("meteordevelopment:meteor-client:1.10.8")
+    compileOnly(files("libs/meteor-client-1.10.8.jar"))
+    
 }
 
 
