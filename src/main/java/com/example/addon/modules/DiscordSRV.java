@@ -73,3 +73,4 @@ public class DiscordSRV extends Module {
         .onChanged(o -> requireRebuild = true)
         .build()
     );
+}
