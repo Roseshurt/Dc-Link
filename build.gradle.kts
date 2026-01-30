@@ -23,7 +23,7 @@ repositories {
 dependencies {
     // Fabric
     minecraft("com.mojang:minecraft:1.21.1")
-    mappings(variantOf("net.fabricmc:yarn:1.21.8-rc1+build.2") { it.classifier = "v2" })
+    mappings("net.fabricmc:yarn:1.21.8-rc1+build.2:v2")
     modImplementation("net.fabricmc:fabric-loader:0.14.23")
 
     // Meteor
