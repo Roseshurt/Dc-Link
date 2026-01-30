@@ -3,7 +3,7 @@ mod-version = "0.1.0"
 
 # Fabric & Minecraft versions
 minecraft = "1.21.8"
-yarn-mappings = "1.21.8+build.4"
+yarn-mappings = "1.21.8-rc1+build.2/"
 fabric-loader = "0.17.2"
 
 # Loom for development
