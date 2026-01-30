@@ -1,7 +1,8 @@
-package com.example.addon.systems.modules;
+package com.example.addon.modules;
 
-import com.example.addon.utils.webhook.WebhookContent;
 import com.example.addon.utils.webhook.WebhookHandler;
+import com.example.addon.utils.webhook.WebhookContent;
+
 
 import meteordevelopment.meteorclient.events.game.GameLeftEvent;
 import meteordevelopment.meteorclient.events.game.ReceiveMessageEvent;
