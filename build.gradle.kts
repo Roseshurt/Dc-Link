@@ -20,11 +20,10 @@ repositories {
     maven { url = uri("https://maven.meteordev.org/snapshots") }
 }
 
-
 dependencies {
     // Fabric
     minecraft(libs.minecraft)
-    mappings(variantOf(libs.yarn) { classifier("v2") })
+    mappings(variantOf("net.fabricmc:yarn:1.21.8-rc1+build.2") { classifier("v2") })
     modImplementation(libs.fabric.loader)
 
     // Meteor
